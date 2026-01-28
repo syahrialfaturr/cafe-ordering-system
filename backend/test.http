@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 5,
+  "items": [
+    { "menu_id": 1, "quantity": 2 },
+    { "menu_id": 6, "quantity": 1 }
+  ]
+}
