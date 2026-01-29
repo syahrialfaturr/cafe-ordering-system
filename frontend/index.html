@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruang Kopi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    ☕ <strong>Ruang Kopi</strong>
+    <p>Pesan langsung dari meja kamu</p>
+  </header>
+
+  <main class="container">
+    <section class="menu">
+      <h2>Menu</h2>
+      <div id="menu-list" class="menu-grid">
+        <p>Loading menu...</p>
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h3>🛒 Pesanan Kamu</h3>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: <span id="total-price">Rp 0</span></p>
+      <button id="order-btn">Pesan Sekarang</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

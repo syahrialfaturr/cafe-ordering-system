@@ -8,3 +8,148 @@ Content-Type: application/json
     { "menu_id": 6, "quantity": 1 }
   ]
 }
+### CREATE ORDER
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 3,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Sambal Bawang", "Sambal Matah"]
+    }
+  ]
+}
+
+### CREATE ORDER WITH OPTIONS
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 7,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Sambal Bawang", "Sambal Matah"]
+    }
+  ]
+}
+
+#### bla
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 9,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Extra Pedas"]
+    }
+  ]
+}
+
+### UPDATE ORDER STATUS
+PUT http://localhost:3000/api/orders/7/status
+Content-Type: application/json
+
+{
+  "status": "paid"
+}
+### CANCEL ORDER
+PUT http://localhost:3000/api/orders/6/cancel
+
+### Update status
+PUT http://localhost:3000/api/orders/7/status
+Content-Type: application/json
+
+{
+  "status": "paid"
+}
+
+### create order
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 10,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Extra Pedas"]
+    }
+  ]
+}
+
+### UPDATE STATUS ORDER
+PUT http://localhost:3000/api/orders/7/status
+Content-Type: application/json
+
+{
+  "status": "paid"
+}
+
+#### test payment
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 10,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Extra Pedas"]
+    }
+  ]
+}
+###test bayar
+POST http://localhost:3000/api/payments
+Content-Type: application/json
+
+{
+  "order_id": 8,
+  "method": "cash"
+}
+
+### test buat order
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 12,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Extra Pedas"]
+    }
+  ]
+}
+### test bayar order
+POST http://localhost:3000/api/payments
+Content-Type: application/json
+
+{
+  "order_id": 10,
+  "method": "cash"
+}
+### order baru
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "table_number": 11,
+  "items": [
+    {
+      "menu_id": 6,
+      "quantity": 1,
+      "options": ["Extra Pedas"]
+    }
+  ]
+}
